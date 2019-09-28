@@ -21,7 +21,4 @@ const mapStateToProps = state => {
   };
 }
 
-
-// export default Header;
-
 export default connect(mapStateToProps, {})(Header);

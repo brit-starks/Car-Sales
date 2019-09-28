@@ -9,13 +9,11 @@ const Total = props => {
   );
 };
 
-// export default Total;
-
 const mapStateToProps = state => {
   console.log('mSTP: ', state);
   return{
     car: state.car,
-    // price: state.store
+    additionalPrice: state.additionalPrice
   };
 }
 

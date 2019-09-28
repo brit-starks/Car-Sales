@@ -1,4 +1,5 @@
-import { useReducer } from 'react';
+import { ADD_FEATURE } from '../actions';
+
 
 const initialState = {
   additionalPrice: 0,
@@ -20,6 +21,11 @@ const initialState = {
 export const Reducer = (state = initialState, action) => {
   console.log('Reducers: Reducer.js: Action ', action);
   switch(action.type){
+    case ADD_MOVIE: 
+      return{
+        ...state,
+          features:[...state.features, action.payload]
+      }
     default: 
     return state;
   }
