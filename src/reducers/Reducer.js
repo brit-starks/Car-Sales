@@ -19,12 +19,13 @@ const initialState = {
 };
 
 export const Reducer = (state = initialState, action) => {
-  console.log('Reducers: Reducer.js: Action ', action);
+  // console.log('Reducers: Reducer.js: Action ', action);
   switch(action.type){
-    case ADD_MOVIE: 
+    case ADD_FEATURE: 
       return{
-        ...state,
-          features:[...state.features, action.payload]
+        car: {
+          ...state.car, features: [... state.car.features, action.payload]
+        }
       }
     default: 
     return state;
